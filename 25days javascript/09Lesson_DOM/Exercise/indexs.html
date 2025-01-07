@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Name" class="js-name-input"
+onkeyup="
+handleSumitKeydown(event)">
+
+<button onclick="
+Submit();
+">Submit</button>
+
+<p class="js-sumbit"></p>
+
+   <script>
+
+function handleSumitKeydown(event){
+if(event.key )
+{
+  Submit();
+}
+}
+
+
+function Submit(){
+  const inputElement = document.querySelector('.js-name-input');
+
+  let name = 
+inputElement.value;
+
+  document.querySelector('.js-sumbit').innerHTML = name;
+}
+</script>
+</body>
+</html>

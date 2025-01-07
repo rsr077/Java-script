@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+  Subscribe();
+  /*  cartQuantity =cartQuantity +2; */
+   "class="js-subscribe-button">+2</button>
+
+   <p class="js-total-cost"></p>
+   <script>
+    let cartQuantity =0;
+
+    function Subscribe() {
+
+      cartQuantity +=2;
+   console.log(`cart quantity:${cartQuantity}`); 
+
+   
+
+    const inputElement =  document.querySelector('.js-subscribe-button');
+    }
+
+   
+    let cost = inputElement.value;
+    document.querySelector('.js-total-cost').innerHTML = cost;
+   </script>
+</body>
+</html>

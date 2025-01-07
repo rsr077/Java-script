@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <button>9</button>
+   <button onclick="
+   Nineb();
+   "class ="js-9b-button">9b</button>
+<hr>
+
+<input type="text" placeholder="Name" class="js-name-input"
+onkeydown="
+handleSumitKeydown(event)">
+
+<button onclick="
+Submit();
+">Submit</button>
+
+<p class="js-sumbit"></p>
+
+   <script>
+
+function handleSumitKeydown(event){
+if(event.key === 'Enter'){
+  Submit();
+}
+}
+
+
+function Submit(){
+  const inputElement = document.querySelector('.js-name-input');
+
+  let name = 
+inputElement.value;
+
+  document.querySelector('.js-sumbit').innerHTML = name;
+}
+
+
+  console.log(document.querySelector('button').innerHTML);
+
+  function Nineb(){
+    const buttonElement = document.querySelector('.js-9b-button');
+
+    if(buttonElement.innerHTML === '9b'){
+      buttonElement.innerHTML = '9b Hello!';
+    }else {
+      buttonElement.innerHTML = '9b';
+    }
+  }
+   </script>
+</body>
+</html>

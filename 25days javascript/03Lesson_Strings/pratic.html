@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let hi = 'Rajeev';
+    console.log (hi);
+ 
+  let concatenation = 'Total cost :   $'+ (5+3);
+console.log(concatenation);
+
+let interpolation = `Total cost : $${5+3}`;
+console.log (interpolation);
+
+
+let math = 'Total cost :   $' + Math.round(5.99 + 2.95 );
+console.log(math);
+
+
+let maths= `Total cost : $${Math.round(5.99 + 2.95)}`;
+console.log(maths);
+
+
+let hie =  `Total cost : $${5.99+2.99} \n ${('Thank you,come again!')}`
+
+console.log 
+
+
+let items = `Items ${((2+2))} $${Math.round(57.88)}`
+console.log(items);
+
+let item = `Shipping & handling  $${Math.round(9.98)}`
+console.log(item);
+
+
+let ite = `Items (${2+2}): $${((2095 * 2) +(799*2))/100}`
+
+console.log(ite);
+
+
+let it = `Shipping & handling:     $${9.98}`
+console.log(it);
+
+let tax =  `Total before tax :   $${((2095 * 2) +(799*2) + 998)/100}`;
+
+console.log(tax);
+
+
+let est= `Estimated tax(10%) :   $${Math.round(((2095 * 2) +(799*2) + 998)*0.1)/100}`
+console.log(est);
+
+
+let total =  `Total before tax :   $${((2095 * 2) +(799*2) + 998 +679)/100}`;
+
+document.body.innerHTML = total
+console.log(total);
+  </script>
+</body>
+</html>

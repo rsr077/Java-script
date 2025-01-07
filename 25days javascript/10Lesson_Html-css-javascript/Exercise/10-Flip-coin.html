@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="10-Flip-coin.css">
+</head>
+<body>
+
+  <p class="title"> Head and Tail </p>
+  <button onclick="
+ 
+   playgame('Head');
+
+  "class="move-button "><img src="img/head-emoji.jpg" class="move-icon"></button>
+
+ <button onclick="
+
+  
+  playgame('Tail');
+ "class="move-button" ><img src="img/head-emoji.jpg" class="move-icon"></button>
+
+<p class="js-result result"></p>
+<p class="js-move">
+  You 
+  <img src="img/head-emoji.jpg" class="move-icons">
+  <img src="img/head-emoji.jpg" class="move-icons">Computer
+</p>
+ <p class="js-score score"></p>
+
+<button onclick="
+score.wins = 0;
+score.losses = 0;
+localStorage.removeItem('score');
+updateScoreElement();
+"class="reset-score-button"
+>Reset Score</button>
+
+<script src="10-Flip-coin.js"> </script>
+</body>
+</html>

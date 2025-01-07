@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+      function greeting(){
+      console.log('hello');
+    }
+    greeting();
+
+
+    // varibal in Function
+    // Anonymous function (function without a name )
+/* 
+    const num 2; */
+    const function1 = function (){ // Anonymous function 
+      console.log('hello1');
+    };
+    function1();
+
+    // object in function 
+    const object1 = {
+      /*  num:2,  */
+      fun:function(){  // Anonymous function
+        console.log('hello3');
+      }
+    };
+    object1.fun();
+
+
+    // Passsing a value into a function 
+
+    function display(param){
+      console.log(param);
+    }
+    display(2);
+
+    // passing a function into another function  (callback)
+
+    function run(param) {
+      param();
+    }
+    run(function(){
+      console.log('hello4');
+    });
+
+    // SetTimeout - run after three second
+
+    // Asynchronous Code -won't wait for a line to finish efore going to the next line 
+
+
+    // Synchronous Code - will wait for one line to finish before going to the next line 
+  /*   
+    setTimeout(function() {
+      console.log('timeout1');
+      console.log('timeout');
+    },3000);
+
+    console.log('Next line'); */
+
+// setInterval - run every 3 second 
+
+/* setInterval(function() {
+  console.log('interval');
+},3000);
+
+console.log('next line 2'); */
+
+//.forEach()  is the preferred way to loop through an array 
+
+/* [
+  'make dinner',
+  'wash dishes',
+  'watch youtube'
+].forEach(function(value ,index){
+  console.log(value);
+  console.log(index);
+}); */
+ 
+//skip 
+
+
+[
+  'make dinner',
+  'wash dishes',
+  'watch youtube'
+].forEach(function(value ,index){// .forEach ((value, index)=>{ })
+
+  if(value === 'wash dishes') {
+    return;
+  }
+  console.log(value);
+  console.log(index);
+});
+    
+  </script>
+</body>
+</html>

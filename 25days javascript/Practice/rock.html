@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+   
+   const computermove= pickcomputerMove();
+    let result ='';
+
+    if(computermove === 'rock'){
+      result = 'Tie';
+    }else if (computermove === 'Paper'){
+      result = 'win';
+    }else if (computermove === 'Scissors'){
+      result = 'lose';
+    }
+
+    alert(`you pick rock  computermove ${computermove}. ${result}`);
+
+    ">rocl</button>
+
+    <button>paper</button>
+
+    <button>Scissors</button>
+
+    <script>
+     
+      function pickcomputerMove() {
+        const randomNumber = Math.random();
+   
+        let  computermove = '';
+    if(randomNumber>=0 && randomNumber<1/3){
+      computermove = 'rock';
+    }else if(randomNumber>=1/3 && randomNumber<2/3){
+      computermove = 'Paper';
+    }else if(randomNumber>2/3 && randomNumber<1){
+     computermove = 'Scissors';
+    }
+    return computermove;
+      }
+    </script>
+</body>
+</html>

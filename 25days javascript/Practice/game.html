@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+.hi-button{
+  border: none;
+      background-color: black;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+.is-subscribed  {
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+    .is-subscribeds  {
+      background-color: rgb(196, 32, 32);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="
+    const buttonElement = 
+    document.querySelector('.js-hi-button');
+    
+    if(buttonElement.innerHTML === 'Gamings'){
+      buttonElement.innerHTML = 'Gaming';
+      buttonElement.classList.add('is-subscribed');
+    }else{
+      buttonElement.innerHTML = 'Gamings';
+      buttonElement.classList.remove('is-subscribed');
+    
+    }
+
+
+    "
+   class = "js-hi-button hi-button" >Gamings</button>
+</body>
+</html>

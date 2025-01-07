@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+   const computerMove = playerMoves();
+
+
+let result = '';
+ 
+  if (computerMove === 'Head') {
+    result = 'You win.';
+  }else if ( computerMove === 'Tail'){
+   result = 'You lose.';
+  }
+
+  alert(`${computerMove}. ${result}`);
+
+
+  ">Head</button>
+
+ <button onclick="
+ const computerMove = playerMoves();
+
+
+  let result = '';
+
+ if (computerMove === 'Head') {
+   result = 'You lose.';
+ }else if ( computerMove === 'Tail'){
+  result = 'You win.';
+ }
+
+ alert(`${computerMove}. ${result} `);
+ ">tail</button>
+
+<script>
+
+
+function playgame (playerMove){
+  const computerMove = playerMoves();
+
+let result = '';
+
+}
+  function playerMoves() {
+ 
+
+    const  randomNumber = Math.random();
+
+    let computerMove ='';
+if (randomNumber >= 0 && randomNumber <0.5){
+    computerMove ='Head';
+   }else {
+    computerMove = 'Tail';
+   }
+   console.log(computerMove);
+   return computerMove;
+
+  }
+</script>
+</body>
+</html>

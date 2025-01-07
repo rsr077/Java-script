@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .toggled {
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+    .is-toggled {
+      
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+    
+  </style>
+</head>
+<body>
+  <button style="
+    background-color: yellow;
+    padding: 6px 45px;
+    border-radius: 30px;
+    border: none;
+    ">Add to Cart </button>
+    <hr>
+
+    <button  style="
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 3px;
+    border: none;
+    ">Request now</button>
+
+<button   style="
+background-color: rgb(247, 247, 247);
+color: rgb(0, 0, 0);
+font-weight: bold;
+padding: 6px 8px;
+font-family: Arial;
+border-radius: 3px;
+border: none;
+">Schedule for later</button>
+<hr>
+
+<button class="js-button">Test</button>
+<hr>
+<button onclick="
+gameing();
+" 
+class="js-black-button toggled">Gaming</button>
+
+</body>
+
+<script>
+  const buttonElement = document.querySelector('.js-button');
+  console.log(buttonElement);
+
+
+
+function gameing() {
+   const buttonElement = document.querySelector('.js-black-button');
+
+   if (buttonElement.innerHTML === 'gameing' ){
+    buttonElement.classList.add('is-toggled')
+   }
+}
+</script>
+</html>

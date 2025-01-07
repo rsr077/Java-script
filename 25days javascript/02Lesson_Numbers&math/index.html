@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .hi {
+      display: grid;
+      grid-template-columns: 100px 0px;
+margin-top: 3px;
+  
+    }
+    .hello {
+      display: grid;
+      grid-template-columns: 100px 0px;
+    margin: 0;
+  
+    }
+    .hee{
+      margin-bottom: 0px;
+    }
+    .he {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<!--   (2095 +799)/100 
+  Math.round(2.2)
+  Math.round(2.8)
+  ((2095 +799) *0.1)/100
+  Math.round ((2095 +799) *0.1)/100 -->
+ 
+
+<p>Order summary</p>
+
+<div class="hello"><p class="hee">items(3)</p>
+</div>
+
+<div class="hi"><p class="he">items(3)</p>
+  </div>
+
+  <script>
+    let number = 3.14;
+    let rounded = Math.round(number);
+    console.log(rounded);
+
+    let num = 2.8;
+    let round = Math.round(num);
+    console.log(round);
+
+    let hi = 2.2;
+    let hello = Math.round(hi);
+    console.log(hello);
+
+    let a =2095;
+    let  b =799;
+
+    let c ='Items('+(1 +1 )+'):  $' +(2095 + 799)/100;
+    /* '$'+ (a + b)/100; */
+    console.log(c);
+
+
+    let celsius = -5;
+     let f = (celsius * 9/5)+ 32
+    console.log(f);
+
+    let fa = 86;
+    let ca = (fa-32)*5/9;
+    console.log(ca);
+
+
+    
+  </script>
+</body>
+</html>

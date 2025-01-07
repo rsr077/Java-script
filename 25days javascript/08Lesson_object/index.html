@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   /*  const product = {
+      name :'socks',
+      price: 100
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+    //replace
+    product.name ='cotton socks';
+    console.log(product);
+     //add
+    product.bag = 'school bag';
+    console.log(product);
+    // delete
+    delete product.bag ;
+    console.log(product);
+
+   const product2 = {
+    name : 'shrit',
+    'delivery-time': '1 day',
+
+    rating: {
+      stars: 4.5,
+      count :87
+    },
+
+   fun: function function1() {
+    console.log('function inside oject');
+   }
+   
+   };
+
+
+ console.log(product2.name);
+   console.log(product2);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+
+   // object in function 
+    console.log(product2.rating.count);
+    product2.fun();
+ // java to json
+    console.log(typeof console.log);
+    console.log(JSON.stringify(product2));
+// json to java
+   const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+ */
+
+   // Auto-boxing
+
+  console.log('hello'.length);
+  console.log('hello'.toUpperCase());
+
+  // object are references 
+  const object1 = {
+    message: 'hello'
+  };
+  const object2 = object1;
+
+
+  object1.message = 'Goog morning';
+  console.log(object1);
+  console.log(object2);
+
+  const object3 = {
+    message: 'Good morning'
+  };
+  console.log(object3 === object1);
+  console.log(object2 === object1);
+
+  // Shortcut for object 
+
+  const object4 = {
+    message: 'Good job!',
+    price: 324
+  };
+
+  // const message = object4.message ;
+  //destructuring  
+  const {message , price} = object4;
+  
+  console.log(message);
+  console.log(price);
+
+  // shorthand Property & shorthand method 
+
+  const object5 = {
+    // message:message
+    message,
+   /*  method:function function1(){
+      console.log('method');
+    } */
+   method(){
+    console.log('method');
+   }
+  };
+  console.log(object5);
+  object5.method();
+  </script>
+</body>
+</html>

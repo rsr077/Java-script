@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+ 
+   playgame('Head');
+
+  ">Head</button>
+
+ <button onclick="
+
+  
+  playgame('Tail');
+ ">tail</button>
+
+<p class="js-result"></p>
+<p class="js-move"></p>
+ <p class="js-score"></p>
+
+<button onclick="
+score.wins = 0;
+score.losses = 0;
+localStorage.removeItem('score');
+updateScoreElement();
+"
+>Reset Score</button>
+
+<script>
+
+const score = JSON.parse(localStorage.getItem('score')) || {
+  wins:0,
+  losses:0
+};
+updateScoreElement();
+
+function playgame (playerMove){
+  const randomNumber = Math.random();
+  const computerMove = playerMoves();
+
+let result = '';
+
+if(playerMove === 'Head'){
+    if (computerMove === 'Head') {
+      result = 'You win.';
+    }else if ( computerMove === 'Tail'){
+    result = 'You lose.';
+    }
+
+}else if(playerMove === 'Tail') {
+      if (computerMove === 'Head') {
+      result = 'You lose.';
+    }else if ( computerMove === 'Tail'){
+      result = 'You win.';
+    }
+}
+
+
+if (result === 'You win.'){
+  score.wins +=1;
+}else if (result === 'You lose.') {
+  score.losses  +=1;
+}
+
+localStorage.setItem('score',JSON.stringify(score));
+
+updateScoreElement(); 
+
+document.querySelector('.js-result').innerHTML = result;
+
+document.querySelector('.js-move').innerHTML = `You ${playerMove}- Computer ${computerMove}`;
+
+}
+function updateScoreElement() {
+  document.querySelector('.js-score')
+  .innerHTML =`wins:${score.wins}, Losses:${score.losses}`;
+}
+
+
+
+
+
+  function playerMoves() {
+ 
+
+    const  randomNumber = Math.random();
+
+    let computerMove ='';
+if (randomNumber >= 0 && randomNumber <0.5){
+    computerMove ='Head';
+   }else {
+    computerMove = 'Tail';
+   }
+  
+   return computerMove;
+
+  }
+</script>
+</body>
+</html>

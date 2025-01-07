@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //refrence
+   /*  const array1 = [1,2,3];
+    const array2 = array1.slice();
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    const [firstvalue, secondvalue] = [1,2,3]; */
+
+  //break and continue
+  /*   for(let i = 1; i<=10; i++) {
+      if(i===3) {
+        continue;
+      }
+      console.log(i);
+      if(i===8){
+        break;
+      }
+    }
+ */
+    /* for(let i = 1; i<=10; i++) {
+      if(i%3===0) {
+        continue;
+      }
+      console.log(i);
+      if(i===8){
+        break;
+      }
+    } */
+
+   /*  let i = 1;
+
+    while(i<10){
+      if(i%3 ===0){
+        continue;
+      }
+      console.log(i);
+      i++
+    }
+ */
+    // How to use loops with functions 
+
+ /*  function doubleArray(nums) { 
+    const numsDoubled = [];
+
+    for(let i = 0; i<nums.length; i++) {
+      const  num = nums[i];
+      numsDoubled.push(num *  2);
+    }
+    console.log(numsDoubled);
+  }
+  doubleArray([1,2,3,]);
+  doubleArray([2,2,5,]);
+     */
+  
+//return
+
+     function doubleArray(nums) { 
+    const numsDoubled = [];
+
+    for(let i = 0; i<nums.length; i++) {
+      const  num = nums[i];
+    if(num == 0) {
+      return numsDoubled;
+    }
+
+      numsDoubled.push(num *  2);
+    }
+   return numsDoubled;
+  }
+  console.log( doubleArray([1,2,3,]));
+  console.log( doubleArray([2,2,5,0,5,]));
+    
+  </script>
+</body>
+</html>
