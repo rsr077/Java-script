@@ -6,9 +6,7 @@ import { formatCurrency } from "./utils/money.js";
 import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-
-import { deliveryOptions as deliveryOption } from "../data/deliveryOptions.js";
-
+import { deliveryOptions } from '../data/deliveryOptions.js';
 hello();
 
 const today = dayjs();
@@ -37,7 +35,7 @@ const deliveryOptionsId = cartItem.deliveryOptionsId;
 
 let deliveryOption;
 
-deliveryOption.forEach((option) => {
+deliveryOptions.forEach((option) => {
   if(option.id === deliveryOptionsId) {
     deliveryOption = option;
   }
@@ -101,7 +99,7 @@ let html = '';
 
 
 
-   deliveryOption.forEach((deliveryOptions) =>{
+   deliveryOptions.forEach((deliveryOptions) =>{
     const today = dayjs();
     const deliveryDate = today.add(
    deliveryOptions.deliveryDays,
