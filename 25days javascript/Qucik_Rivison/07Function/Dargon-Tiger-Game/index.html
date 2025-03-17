@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+
+PlayGame('Dargon')
+ 
+    ">Dargon</button>
+
+  <button onclick="
+  
+    PlayGame('Tiger')
+
+  ">Tiger</button>
+
+  <script>
+
+function PlayGame(playerMove){
+
+  const computerMove =  pickComputerMove() 
+let result = ''
+if(playerMove === 'Dargon'){
+if(computerMove === 'Dargon'){
+result = 'You win'
+}else if(computerMove === 'Tiger'){
+result = 'You lose'
+}
+} else if(playerMove === 'Tiger'){
+
+
+if(computerMove === 'Tiger'){
+  result = 'You win.'
+}else if(computerMove === 'Dargon'){
+   result = 'You Lose';
+}
+}
+alert(`You chose ${playerMove} ${result}`)
+
+}
+
+
+
+  function pickComputerMove(){
+    let randomNumber = Math.random();
+    let computerMove = '';
+    if(randomNumber >= 0 && randomNumber <= 1/2){
+      computerMove = 'Dargon';
+    }else if(randomNumber >= 1/2 && randomNumber <= 1){
+     computerMove = 'Tiger';
+    }
+      return computerMove;
+    }
+  </script>
+</body>
+</html>

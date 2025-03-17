@@ -24,6 +24,8 @@
     delete product.bag ;
     console.log(product);
 
+   
+
    const product2 = {
     name : 'shrit',
     'delivery-time': '1 day',
@@ -32,7 +34,7 @@
       stars: 4.5,
       count :87
     },
-
+  // function inside object  = Method 
    fun: function function1() {
     console.log('function inside oject');
    }
@@ -49,8 +51,10 @@
     console.log(product2.rating.count);
     product2.fun();
  // java to json
+
     console.log(typeof console.log);
     console.log(JSON.stringify(product2));
+    
 // json to java
    const jsonString = JSON.stringify(product2);
     console.log(JSON.parse(jsonString));

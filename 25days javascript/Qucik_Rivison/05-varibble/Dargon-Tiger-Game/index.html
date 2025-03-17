@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    let randomNumber = Math.random();
+    let computerMove = '';
+    if(randomNumber >= 0 && randomNumber <= 1/2){
+      computerMove = 'Dargon';
+    }else if(randomNumber >= 1/2 && randomNumber <= 1){
+     computerMove = 'Tiger';
+    }
+
+    let result = '';
+
+ if(computerMove === 'Dargon'){
+    result = 'You win'
+ }else if(computerMove === 'Tiger'){
+    result = 'You lose'
+ } 
+  
+  alert(`You chose Dargon ${result}`)
+    ">Dargon</button>
+
+  <button  onclick="
+    let randomNumber = Math.random();
+    let computerMove = '';
+  
+
+     if(randomNumber >= 0 && randomNumber <= 1/2){
+         computerMove = 'Dargon'
+     } else if (randomNumber >= 1/2 && randomNumber <= 1){
+         computerMove = 'Tiger'
+     }
+      let result = ''
+
+      if(computerMove === 'Tiger'){
+        result = 'You win.'
+      }else if(computerMove === 'Dargon'){
+         result = 'You Lose';
+      }
+      alert(`You chose Tiger ${result}`)
+
+  ">Tiger</button>
+
+  <script>
+    let Playgame = '';
+  </script>
+</body>
+</html>
