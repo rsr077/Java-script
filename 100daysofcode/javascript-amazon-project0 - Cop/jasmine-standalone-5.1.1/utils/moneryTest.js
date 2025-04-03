@@ -1,4 +1,4 @@
-import {formatCurrency} from '../scripts/utils/monery.js'
+import {formatCurrency} from '../../scripts/utils/monery.js'
 
   console.log('converts cents into dolloars');
 if( formatCurrency(2095) === '20.95') {
